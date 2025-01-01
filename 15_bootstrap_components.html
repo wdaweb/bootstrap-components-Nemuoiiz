@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Laila:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- 1. 先引進 bootstrap 樣式 -->
+    <link rel="stylesheet" href="./css/bootstrap5.3.css">
+
+    <style>
+        body {
+            font-family: "Kiwi Maru", serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid px-0 mx-0">
+
+        <!-- 導覽列 -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-success bg-opacity-50 fixed-top px-3">
+            <!-- brand -->
+            <a class="navbar-brand" href="#">スタジオジブリ</a>
+            <!-- button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Nemui">
+                <!-- 漢堡 icon -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav-list -->
+            <div id="Nemui" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">最新情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">イベント情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">会社案内</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">三鷹の森ジブリ美術館</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">関連リンク</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 輪播圖 -->
+        <div id="Nemui-carousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- 下方顯示當前輪播條 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Nemui-carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#Nemui-carousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#Nemui-carousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#Nemui-carousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <!-- 輪播圖片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="./images/ghibli.png" class="d-block w-100 vh-100 object-fit-cover">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./images/howl.jpg" class="d-block w-100 vh-100 object-fit-cover">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./images/totoro.jpg" class="d-block w-100 vh-100 object-fit-cover">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./images/ponyo.jpg" class="d-block w-100 vh-100 object-fit-cover">
+                </div>
+            </div>
+
+            <!-- 左右兩側切換按鈕 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#Nemui-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#Nemui-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- 三張卡片 -->
+        <div
+            class="cards w-100 d-flex flex-column flex-md-row justify-content-evenly align-items-center px-3 pb-3 p-md-5 min-vh-100">
+            <div class="card w-100 w-md-25 mt-4 mx-3">
+                <img class="card-img-top" src="./images/chihiro.jpg">
+                <div class="card-body">
+                    <h5 class="card-title py-1">千と千尋の神隠し</h5>
+                    <p class="card-text">
+                        トンネルのむこうは、不思議の町でした。10歳の少女千尋は、入ってはいけない世界に足を踏み入れる。無力感と絶望の中、彼女は「働かせてください」と力を振り絞り、眠っていた「生きる力」が目覚めていく。
+                    </p>
+                </div>
+            </div>
+
+            <div class="card w-100 w-md-25 mt-4 mx-3">
+                <img class="card-img-top" src="./images/mononoke.jpg">
+                <div class="card-body">
+                    <h5 class="card-title py-1">もののけ姫</h5>
+                    <p class="card-text">
+                        室町時代、村を襲ったタタリ神を退治した青年アシタカは死の呪いを受け、西へ旅立つ。森で犬神に育てられた少女サンと出会うが、人間の森開発が自然と対立を招いていると知る。アシタカは双方の共存を模索する。
+                    </p>
+                </div>
+            </div>
+
+            <div class="card w-100 w-md-25 mt-4 mx-3">
+                <img class="card-img-top" src="./images/sophie.jpg">
+                <div class="card-body">
+                    <h5 class="card-title py-1">ハウルの動く城</h5>
+                    <p class="card-text">
+                        若い帽子屋のソフィーは、悪名高い魔女に呪われ90歳の老婆に変えられる。自分を取り戻すため、伝説の魔法使いハウルの動く城を目指し、城でハウルや仲間たちと冒険を繰り広げる。途中で成長し、愛や戦争の悲惨さに向き合う。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 交叉圖片 -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 p-0">
+                    <img class="img-fluid" src="./images/ghibli-museum.jpg">
+                </div>
+                <div
+                    class="col-12 col-md-6 bg-secondary bg-opacity-10 text-dark d-flex flex-column justify-content-center">
+                    <div class="p-5 lead text-center">
+                        <h1>三鷹の森ジブリ美術館🎨</h1>
+                        <p class="py-3">
+                            三鷹の森ジブリ美術館は「天空の城ラピュタ」「となりのトトロ」「魔女の宅急便」など、日本のアニメ映画を代表する作品を数多く生み出してきたスタジオジブリの美術館。正式名称は三鷹市立アニメーション美術館。迷路のような館内は順路もなく、どこに行くかは自分次第。ジブリ映画の世界を味わえるのはもちろん、アニメーション映画がどのように作られているかなど、ものづくりの魅力も発信。
+                        </p>
+                        <a href="#" class="btn btn-success">もっと読む</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 p-0 order-sm-1">
+                    <img class="img-fluid" src="./images/coffee.png">
+                </div>
+                <div class="col-12 col-md-6 bg-secondary bg-opacity-10 text-dark d-flex align-items-center">
+                    <div class="p-5 lead text-center">
+                        <h1>麦わらぼうし☕</h1>
+                        <p class="py-3">
+                            井の頭公園の木々に囲まれた、ジブリ美術館のカフェ「麦わらぼうし」。大きな天窓から光が降り注ぐ店内は、まるで自然の中で木漏れ日に包まれているかのよう。席に座ってほっとひと息つく瞬間や、おいしいものを食べたときの幸せな気持ち、大切な人と過ごす時間など……
+                        </p>
+                        <a href="#" class="btn btn-success">もっと読む</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 地圖 -->
+        <section id="map" class="vh-100">
+            <iframe class="w-100 h-100 align-middle"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.2185968597164!2d139.5678567757884!3d35.69623797258247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ee34e5038c2d%3A0x4de155903f849205!2z5LiJ6be55LmL5qOu5ZCJ5Y2c5Yqb576O6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1735565222634!5m2!1szh-TW!2stw"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+
+        <!-- 表單 -->
+        <section
+            class="w-100 vh-auto vh-md-100 d-flex flex-column justify-content-center align-items-center bg-secondary bg-opacity-10"
+            style="min-height: 100vh;">
+            <div class="text-center">
+                <h3 class="my-3">📮問い合わせ</h3>
+                <h5>スタジオジブリへのメール</h5>
+                <p>ご意見ご要望等、コメント欄にお書き込み下さい</p>
+            </div>
+
+            <form class="row w-100 d-flex justify-content-center align-items-center mb-3 px-md-5">
+
+                <div class="row px-md-5">
+                    <!-- 姓名、性別 -->
+                    <div class="col-12 col-md-6 mb-2">
+                        <label for="formName" class="form-label">お名前</label>
+                        <div class="input-group col-6">
+                            <input type="text" class="form-control" id="formName">
+
+                            <div class="input-group-text bg-secondary bg-opacity-10">
+                                <label class="form-check-label me-1 text-dark" for="sir">男性</label>
+                                <input class="form-check-input me-3 my-0" type="radio" name="genderRadio" id="sir"
+                                    value="先生">
+
+                                <label class="form-check-label me-1 text-dark" for="mrs">女性</label>
+                                <input class="form-check-input my-0" type="radio" name="genderRadio" id="mrs"
+                                    value="女士">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 電話 -->
+                    <div class="col-12 col-md-6 mb-2">
+                        <label for="formphone" class="form-label">連絡先（電話番号）</label>
+                        <input type="text" class="form-control" id="formphone">
+                    </div>
+                </div>
+
+                <div class="row px-md-5">
+                    <!-- 電子信箱 -->
+                    <div class="col-12 col-md-6 mb-2">
+                        <label for="forEmail" class="form-label">メールアドレス</label>
+                        <input type="text" class="form-control" id="forEmail">
+                    </div>
+
+                    <!-- 問題類型 -->
+                    <div class="col-12 col-md-6 mb-2">
+                        <label for="forQstyle" class="form-label">お問い合わせ種別</label>
+                        <select class="form-select">
+                            <option selected>種別を選んでください</option>
+                            <option value="1">飲食</option>
+                            <option value="2">環境</option>
+                            <option value="3">スタッフ</option>
+                            <option value="4">イベント</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row px-md-5">
+                    <!-- 意見需求 -->
+                    <div class="col-12 mb-2">
+                        <label for="for-comment" class="form-label">コメント</label>
+                        <textarea class="form-control mb-3" id="for-comment" rows="5"></textarea>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="news">
+                            <label class="form-check-label" for="news">
+                                最新情報を受け取る
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 送出按鈕 -->
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn w-auto bg-secondary text-light">送信</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 頁尾區 -->
+        <div id="footer"
+            class="w-100 h-auto bg-opacity-50 bg-success py-5 d-flex flex-column justify-content-center align-items-center text-light">
+            <div class="w-75 h-100 py-2 d-flex flex-wrap flex-row justify-content-evenly">
+
+                <div class="col-6 col-md-3">
+                    <img class="rounded-circle" src="./images/mimi.jpg" style="width: 150px;">
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <p class="fw-bold">Address</p>
+                    <p>
+                        日本東京都小金井市<br>
+                        梶野町1丁目4番25號
+                    </p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <p class="fw-bold">Links</p>
+                    <p>
+                        三鷹の森ジブリ美術館<br>
+                        ジブリパーク<br>
+                        LINE公式アカウント
+                    </p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <p class="fw-bold">Contacts</p>
+                    <p>
+                        Email：post@ghibli.jp<br>
+                        Phone：0570-089-154<br>
+                        Fax：086-224-0648s
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 text-center pt-3">
+                © Copyright 2024 Daine Zhang - All Rights Reserved
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 2. 使用 bootstrap 的 js，可以讓我們使用元件進行互動 -->
+    <script src="./js/bootstrap.bundle5.3.js"></script>
+</body>
+
+</html>
